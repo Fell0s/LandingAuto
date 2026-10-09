@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla | El futuro de la movilidad</title>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Estilos del proyecto -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ========== ENCABEZADO Y MENÚ ========== -->
+    <header id="encabezado">
+        <a href="#inicio" class="logo">
+            <i class="fa-solid fa-bolt"></i>
+            <span>TESLA</span>
+        </a>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <h1>Tesla: el futuro de la movilidad</h1>
+                <p>Autos eléctricos con tecnología de punta, diseñados para acelerar la transición hacia la energía sostenible.</p>
+                <a href="#modelos" class="boton">Conoce los modelos</a>
+            </div>
+            <div class="hero-imagen">
+                <img src="img/hero.jpg" alt="Auto Tesla en carretera">
+            </div>
+        </section>
+
+        <!-- ========== MODELOS (CARDS) ========== -->
+        <section id="modelos">
+            <h2>Nuestros modelos</h2>
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <img src="img/model-s.jpg" alt="Tesla Model S">
+                    <h3>Model S</h3>
+                    <p>Sedán de lujo con gran autonomía y aceleración.</p>
+                    <button class="btn-ver-mas" data-modelo="model-s">Ver más</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/model-3.jpg" alt="Tesla Model 3">
+                    <h3>Model 3</h3>
+                    <p>El sedán más accesible de la marca.</p>
+                    <button class="btn-ver-mas" data-modelo="model-3">Ver más</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/model-x.jpg" alt="Tesla Model X">
+                    <h3>Model X</h3>
+                    <p>SUV familiar con puertas tipo ala de halcón.</p>
+                    <button class="btn-ver-mas" data-modelo="model-x">Ver más</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/model-y.jpg" alt="Tesla Model Y">
+                    <h3>Model Y</h3>
+                    <p>SUV compacta, práctica y eléctrica.</p>
+                    <button class="btn-ver-mas" data-modelo="model-y">Ver más</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/cybertruck.jpg" alt="Tesla Cybertruck">
+                    <h3>Cybertruck</h3>
+                    <p>Camioneta eléctrica con diseño futurista.</p>
+                    <button class="btn-ver-mas" data-modelo="cybertruck">Ver más</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ========== TECNOLOGÍA ========== -->
+        <section id="tecnologia">
+            <h2>Tecnología Tesla</h2>
+            <div class="caracteristicas">
+
+                <div class="caracteristica">
+                    <i class="fa-solid fa-car-side"></i>
+                    <h3>Autopilot</h3>
+                    <p>Sistema de asistencia a la conducción con cámaras y sensores.</p>
+                </div>
+
+                <div class="caracteristica">
+                    <i class="fa-solid fa-charging-station"></i>
+                    <h3>Supercargadores</h3>
+                    <p>Red de carga rápida para viajes largos.</p>
+                </div>
+
+                <div class="caracteristica">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <h3>Actualizaciones por software</h3>
+                    <p>El auto mejora con nuevas funciones sin ir al taller.</p>
+                </div>
+
+                <div class="caracteristica">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <h3>Baterías</h3>
+                    <p>Gran autonomía y diseño enfocado en la eficiencia.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== HISTORIA ========== -->
+        <section id="historia">
+            <h2>Historia de la marca</h2>
+            <p>Escribe aquí un párrafo sobre el origen de Tesla: cuándo se fundó, quiénes participaron y cómo ha crecido.</p>
+            <p>Escribe aquí un segundo párrafo con los hitos más importantes de la marca.</p>
+        </section>
+
+        <!-- ========== GALERÍA ========== -->
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="galeria">
+                <img src="img/galeria1.jpg" alt="Tesla en la ciudad">
+                <img src="img/galeria2.jpg" alt="Interior de un Tesla">
+                <img src="img/galeria3.jpg" alt="Tesla cargando en un Supercargador">
+                <img src="img/galeria4.jpg" alt="Vista lateral de un Tesla">
+                <img src="img/galeria5.jpg" alt="Pantalla central de un Tesla">
+                <img src="img/galeria6.jpg" alt="Tesla en la carretera">
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Quieres más información? Escríbenos.</p>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit" class="boton">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ========== VENTANA MODAL (la controla app.js) ========== -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <button id="cerrar-modal" class="cerrar" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-titulo"></h3>
+            <img id="modal-imagen" src="" alt="">
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="pie">
+        <p>&copy; 2026 Proyecto escolar sobre Tesla. Las imágenes pertenecen a sus respectivos dueños.</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/teslamotors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/tesla" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/Tesla" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/tesla" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript del proyecto -->
+    <script src="js/app.js"></script>
+</body>
+</html>
