@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesla | El futuro de la movilidad</title>
 
     <!-- Font Awesome (iconos) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Estilos del proyecto -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
     <!-- ========== ENCABEZADO Y MENÚ ========== -->
@@ -20,14 +24,14 @@
             <span>TESLA</span>
         </a>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#modelos">Modelos</a></li>
-                <li><a href="#tecnologia">Tecnología</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+        <nav id="menu" class="menu">
+            <ul class="menu__ul ul">
+                <li class="menu-li"><a class="menu-item" href="#inicio">Inicio</a></li>
+                <li class="menu-li"><a class="menu-item" href="#modelos">Modelos</a></li>
+                <li class="menu-li"><a class="menu-item" href="#tecnologia">Tecnología</a></li>
+                <li class="menu-li"><a class="menu-item" href="#historia">Historia</a></li>
+                <li class="menu-li"><a class="menu-item" href="#galeria">Galería</a></li>
+                <li class="menu-li"><a class="menu-item" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +42,8 @@
         <section id="inicio" class="hero">
             <div class="hero-texto">
                 <h1>Tesla: el futuro de la movilidad</h1>
-                <p>Autos eléctricos con tecnología de punta, diseñados para acelerar la transición hacia la energía sostenible.</p>
+                <p>Autos eléctricos con tecnología de punta, diseñados para acelerar la transición hacia la energía
+                    sostenible.</p>
                 <a href="#modelos" class="boton">Conoce los modelos</a>
             </div>
             <div class="hero-imagen">
@@ -124,8 +129,18 @@
         <!-- ========== HISTORIA ========== -->
         <section id="historia">
             <h2>Historia de la marca</h2>
-            <p>Escribe aquí un párrafo sobre el origen de Tesla: cuándo se fundó, quiénes participaron y cómo ha crecido.</p>
-            <p>Escribe aquí un segundo párrafo con los hitos más importantes de la marca.</p>
+            <p>Tesla, Inc. fue fundada en 2003 por Martin Eberhard y Marc Tarpenning con el objetivo de impulsar el
+                desarrollo de vehículos eléctricos. Posteriormente, Elon Musk se incorporó como inversionista principal
+                y asumió un papel importante en el crecimiento de la empresa. En 2008, Tesla lanzó el Roadster, su
+                primer automóvil de producción, que demostró que los vehículos eléctricos podían ofrecer buenas
+                prestaciones y una autonomía considerable.
+            </p>
+            <p>Con el paso de los años, Tesla amplió su catálogo con modelos como el Model S, Model 3, Model X y Model
+                Y, además de desarrollar baterías, estaciones de carga rápida y tecnologías de software para sus
+                vehículos. También presentó la Cybertruck y expandió sus actividades hacia el almacenamiento de energía
+                y la energía solar. Actualmente, Tesla es una empresa reconocida por su participación en la industria de
+                los vehículos eléctricos y por impulsar nuevas soluciones relacionadas con la movilidad y la energía
+                sostenible.</p>
         </section>
 
         <!-- ========== GALERÍA ========== -->
@@ -179,7 +194,8 @@
     <footer id="pie">
         <p>&copy; 2026 Proyecto escolar sobre Tesla. Las imágenes pertenecen a sus respectivos dueños.</p>
         <div class="redes">
-            <a href="https://www.instagram.com/teslamotors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/teslamotors" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/tesla" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://x.com/Tesla" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://www.youtube.com/tesla" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
@@ -189,4 +205,5 @@
     <!-- JavaScript del proyecto -->
     <script src="js/app.js"></script>
 </body>
+
 </html>
