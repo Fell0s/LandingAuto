@@ -524,6 +524,30 @@ section h2 {
     color: #888888;
 }
 
+.pwa-controles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 650px;
+    margin: 28px auto 0;
+    padding: 20px;
+    border: 1px solid #303030;
+    border-radius: var(--radio);
+    background-color: var(--gris-oscuro);
+    text-align: center;
+}
+
+.modo-pwa,
+.estado-instalacion {
+    color: #c5c5c5;
+    font-size: 0.9rem;
+}
+
+.estado-instalacion {
+    min-height: 1.4em;
+}
+
 /* =========================================
    10. VENTANA MODAL
 ========================================= */

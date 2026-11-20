@@ -41,6 +41,7 @@ const modelos = {
 ========================================= */
 
 const botones = document.querySelectorAll(".btn-ver-mas");
+const baseUrl = new URL("../", document.currentScript.src);
 
 const modal = document.getElementById("modal");
 const tituloModal = document.getElementById("modal-titulo");
@@ -65,7 +66,7 @@ botones.forEach(function (boton) {
 
         tituloModal.textContent = modelo.nombre;
 
-        imagenModal.src = modelo.imagen;
+        imagenModal.src = new URL(modelo.imagen, baseUrl).href;
         imagenModal.alt = modelo.nombre;
 
         descripcionModal.textContent = modelo.descripcion;
@@ -141,6 +142,74 @@ if (formulario) {
         );
 
         formulario.reset();
+    });
+}
+
+const modoPwa = document.getElementById("modo-pwa");
+const btnInstalar = document.getElementById("btn-instalar");
+const estadoInstalacion = document.getElementById("estado-instalacion");
+let eventoInstalacion = null;
+
+if (modoPwa) {
+    const ruta = window.location.pathname.split("/").filter(Boolean).pop() || "browser";
+    const configuraciones = {
+        browser: ["browser", "any"],
+        "minimail-ui": ["minimal-ui", "portrait"],
+        standalone: ["standalone", "landscape"],
+        fullscrenn: ["fullscreen", "any"]
+    };
+    const [display, orientation] = configuraciones[ruta] || configuraciones.browser;
+    modoPwa.textContent = `Modo de visualización: ${display} | Orientación: ${orientation}`;
+}
+
+window.addEventListener("beforeinstallprompt", function (evento) {
+    evento.preventDefault();
+    eventoInstalacion = evento;
+    if (btnInstalar) {
+        btnInstalar.hidden = false;
+    }
+});
+
+if (btnInstalar) {
+    btnInstalar.addEventListener("click", async function () {
+        if (!eventoInstalacion) {
+            if (estadoInstalacion) {
+                estadoInstalacion.textContent = "La instalación se gestiona desde las opciones del navegador.";
+            }
+            return;
+        }
+
+        eventoInstalacion.prompt();
+        const resultado = await eventoInstalacion.userChoice;
+        if (estadoInstalacion) {
+            estadoInstalacion.textContent = resultado.outcome === "accepted"
+                ? "La instalación fue aceptada."
+                : "La instalación fue rechazada.";
+        }
+        eventoInstalacion = null;
+        btnInstalar.hidden = true;
+    });
+}
+
+window.addEventListener("appinstalled", function () {
+    if (estadoInstalacion) {
+        estadoInstalacion.textContent = "Tesla fue instalada correctamente.";
+    }
+    if (btnInstalar) {
+        btnInstalar.hidden = true;
+    }
+    eventoInstalacion = null;
+});
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register(new URL("service-worker.js", window.location.href))
+            .then(function (registro) {
+                console.log("Service worker registrado correctamente.", registro.scope);
+            })
+            .catch(function (error) {
+                console.error("Error al registrar el service worker.", error);
+            });
     });
 }
 
