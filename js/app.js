@@ -153,10 +153,10 @@ let eventoInstalacion = null;
 if (modoPwa) {
     const ruta = window.location.pathname.split("/").filter(Boolean).pop() || "browser";
     const configuraciones = {
-        browser: ["browser", "any"],
+        browser: ["browser", "portrait"],
         "minimail-ui": ["minimal-ui", "portrait"],
-        standalone: ["standalone", "landscape"],
-        fullscrenn: ["fullscreen", "any"]
+        standalone: ["standalone", "portrait"],
+        fullscrenn: ["fullscreen", "portrait"]
     };
     const [display, orientation] = configuraciones[ruta] || configuraciones.browser;
     modoPwa.textContent = `Modo de visualización: ${display} | Orientación: ${orientation}`;
